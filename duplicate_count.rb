@@ -21,7 +21,7 @@ end
       
     
 end
-=end
+
 def duplicate_count(text) 
   arr = text.downcase.split("") 
   arr.uniq.count { |n| arr.count(n) > 1 } 
@@ -30,3 +30,11 @@ def duplicate_count(text)
   
   end
 
+
+def duplicate_count(str)
+    str.downcase.each_char.find_all { |c| str.downcase.count(c) > 1 }.uniq.size
+end
+=end
+def duplicate_count(text)
+  ('a'..'z').count { |c| text.downcase.count(c) > 1 }
+end
