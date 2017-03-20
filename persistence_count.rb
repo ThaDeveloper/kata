@@ -3,11 +3,11 @@
 def persistence(n)
    count = 0
     loop do
-      if n.to_s.length > 1
+      if n > 10
       array = n.to_s.split("").map(&:to_i)
       n = array. inject(&:*)
       count +=1
-      break if n.to_s.length == 1
+      break if n < 10
       else
         return count = 0
       end
