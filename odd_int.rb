@@ -4,11 +4,11 @@ def find_it(seq)
   seq.each do |int|
   counts[int] += 1
   end
-  counts.each{|k,v|
+  counts.each do|k,v|
     if v % 2 != 0
       return k
     end
-    }
+    end
 end
 =begin
 def find_it(seq)
